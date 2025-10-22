@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header */
 header {
     background-color: #c7b7ff;
     width: 100%;
@@ -18,13 +19,18 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Main layout */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;           /* ✅ allows wrapping instead of one row */
+    gap: 1rem;                 /* space between cards */
+    padding: 2rem 0;
 }
 
+/* Image cards */
 .image-card {
     border: 2px solid #b197fc;
     border-radius: 10px;
@@ -52,10 +58,27 @@ main {
     font-weight: bold;
 }
 
+/* Footer */
 footer {
     width: 100%;
     text-align: center;
     background-color: #c7b7ff;
     padding: 0.5rem 0;
     font-size: 0.9rem;
+}
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;  /* stack vertically */
+        align-items: center;     /* center cards */
+    }
+
+    .image-card {
+        width: 90%;             /* take most of the screen width */
+    }
+
+    .image-card img {
+        height: auto;           /* adjust image height naturally */
+    }
 }
