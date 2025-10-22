@@ -1,0 +1,61 @@
+/* Light purple theme */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f0ff;
+    color: #3d2c8d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #c7b7ff;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-card {
+    border: 2px solid #b197fc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.image-card img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(61, 44, 141, 0.2);
+}
+
+.caption {
+    background-color: #e5dbff;
+    padding: 0.8rem;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #c7b7ff;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
